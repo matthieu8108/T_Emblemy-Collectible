@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T_Emblemy Collectible Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Bootstrap CSS (from CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (optional) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('https://i.imgur.com/lht3XbH.jpeg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            color: rgb(255, 255, 255);
+            margin: 0; /* Remove default margin */
+        }
+
+        .nav-bar{
+            display: flex; /* Arrange items in a horizontal row */
+            gap: 15px; /* Add space between links */
+            justify-content: center; /* Center the links horizontally */
+            align-items: center; /* Align items vertically */
+            list-style: none; /* Remove any default list styles */
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-link {
+            color: aliceblue;
+            text-decoration: none;
+            padding:10px 15px;
+            font-size:16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color:#ffd700;
+        }
+
+
+        header {
+            background-color: rgba(23, 19, 15, 0.8);
+            padding: 20px;
+            margin-bottom: 0; /* Ensure no margin below the header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            width: 200px; /* Logo size */
+            height: auto;
+            margin-right: 20px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 6px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 20px;
+        }
+
+        .search-bar button {
+            margin-right: 15px; /* Adds space between the button and the cart icon */
+        }
+
+        .cart-icon {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+
+         /* Title Styling */
+         .section-title {
+            font-family: serif;
+            text-align: center;
+            font-size: 2rem;
+            margin: 50px 0 20px;
+            cursor: pointer;
+        }
+
+        .delivery-description, .shipping-options {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        table {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+
+        table th, table td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+        }
+
+        table th {
+            background-color: #3b4a59;
+        }
+
+        .checkout-button {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .btn-checkout {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #343a40;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn-checkout:hover {
+            background-color: #495057;
+        }
+
+        footer {
+            background-color: rgba(23, 19, 15, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+        }
+
+        .about-us {
+            background-color: rgba(34, 34, 34, 0.8); /* Dark background with slight transparency */
+            color: white;
+            text-align: center;
+            padding: 50px 20px; /* Padding for spacing */
+            margin: 40px 0; /* Space above and below the section */
+            border-radius: 10px; /* Rounded corners */
+            font-family: serif; /* A classic font for readability */
+        }
+
+        .about-us h2 {
+            font-size: 2.5rem; /* Larger font size for the heading */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+        
+        .about-us p {
+            font-size: 1.2rem; /* Adjust font size for readability */
+            line-height: 1.6; /* Line spacing for better readability */
+            margin: 10px auto; /* Space between paragraphs */
+            max-width: 800px; /* Restrict the text width */
+        }
+</style>
+</head>
+
+<body>
+    <header class="bg-dark text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="text-white">
+                <img src="https://i.imgur.com/VhfYosV.png" alt="Logo" style="width: 150px;">
+            </a>
+
+    <nav class="nav-bar">
+        <a class="nav-link" href="Assignment.html">Home</a>
+        <a class="nav-link" href="book.html">Books</a>
+        <a class="nav-link" href="19thCenturyBooks.html">19th Century Books</a>
+        <a class="nav-link" href="delivery.html">Delivery</a>
+        <a class="nav-link" href="contact.html">Contact Us</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button class="btn btn-light">Search</button>
+        <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+</header>
+
+<main class="container mt-5">
+        <!-- Delivery Information -->
+        <h1 class="section-title">Delivery Information</h1>
+        <p class="delivery-description">
+            At T_Emblemy Collectible Books, we ensure that your books are delivered with care. We partner with trusted carriers to provide timely and secure shipping services. Delivery times typically range between 5–10 business days, depending on your location. International shipping is also available, with delivery times varying by country.
+        </p>
+
+        <!-- Delivery Charges Table -->
+        <h2 class="section-title">Delivery Charges</h2>
+        <p id="delivery-charges-description" class="text-center">
+            This table provides detailed delivery charges for Standard and Express shipping to various regions of the world.
+        </p>
+        <table aria-describedby="delivery-charges-description">
+            <caption>Delivery Charges to Various Regions</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Region</th>
+                    <th scope="col">Standard Shipping</th>
+                    <th scope="col">Express Shipping</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">United Kingdom</th>
+                    <td>$5</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <th scope="row">Europe</th>
+                    <td>$8</td>
+                    <td>$15</td>
+                </tr>
+                <tr>
+                    <th scope="row">United States/Canada</th>
+                    <td>$12</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <th scope="row">Rest of the World</th>
+                    <td>$20</td>
+                    <td>$35</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Shipping Options -->
+        <h2 class="section-title">Shipping Options</h2>
+<div class="shipping-options text-center">
+    <p>Choose from the following shipping options during checkout:</p>
+    <div  style="text-align: center;">
+        <p><b>Standard Shipping:</b> Affordable and reliable for non-urgent deliveries.</p>
+        <p><b>Express Shipping:</b> For faster delivery, ideal for urgent purchases.</p>
+        <p><b>Pickup in Store:</b> Visit our store to pick up your order directly (available for local customers).</p>
+    </div>
+</div>
+
+
+        <!-- Checkout Button -->
+        <div class="checkout-button">
+            <button class="btn-checkout">Proceed to Checkout</button>
+        </div>
+    </main>
+
+<footer>
+    <p style="color:aliceblue">&copy; 2023 T_Emblemy Collectible Books. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><img src="https://i.imgur.com/6FkGqMa.png" alt="Facebook"></a>
+        <a href="#"><img src="https://i.imgur.com/RXFuBpN.jpeg" alt="Twitter"></a>
+        <a href="#"><img src="https://i.imgur.com/aukGJOp.jpeg" alt="Instagram"></a>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (from CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

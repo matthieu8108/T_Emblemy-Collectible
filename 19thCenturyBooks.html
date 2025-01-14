@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T_Emblemy Collectible Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Bootstrap CSS (from CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (optional) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('https://i.imgur.com/lht3XbH.jpeg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            color: rgb(255, 255, 255);
+            margin: 0; /* Remove default margin */
+        }
+
+        header {
+            background-color: rgba(23, 19, 15, 0.8);
+            padding: 20px;
+            margin-bottom: 0; /* Ensure no margin below the header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            width: 200px; /* Logo size */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .nav-bar {
+        display: flex; /* Arrange items in a horizontal row */
+        gap: 15px; /* Add space between links */
+        justify-content: center; /* Center the links horizontally */
+        align-items: center; /* Align items vertically */
+        list-style: none; /* Remove any default list styles */
+        padding: 0;
+        margin: 0;
+        }
+
+        .nav-link {
+        color: aliceblue;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        transition: color 0.3s ease;
+        } 
+
+        .nav-link:hover {
+        color: #ffd700;
+        }
+
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 6px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 20px;
+        }
+
+        .search-bar button {
+            margin-right: 15px; /* Adds space between the button and the cart icon */
+        }
+
+        .cart-icon {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+         /* Title Styling */
+         .section-title {
+            font-family: serif;
+            text-align: center;
+            font-size: 2rem;
+            margin: 50px 0 20px;
+            cursor: pointer;
+        }
+
+        
+        /* Single Book Section */
+        .single-book {
+            display: flex;
+            align-items: right;
+            gap: 20px;
+            margin: 40px;
+            text-align:center;
+           
+        }
+
+        .single-book img {
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .single-book-description {
+            max-width: 600px;
+            
+        }
+        
+
+        footer {
+            background-color: rgba(23, 19, 15, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+        }
+
+        .about-us {
+            background-color: rgba(34, 34, 34, 0.8); /* Dark background with slight transparency */
+            color: white;
+            text-align: center;
+            padding: 50px 20px; /* Padding for spacing */
+            margin: 40px 0; /* Space above and below the section */
+            border-radius: 10px; /* Rounded corners */
+            font-family: serif; /* A classic font for readability */
+        }
+
+        .about-us h2 {
+            font-size: 2.5rem; /* Larger font size for the heading */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+        
+        .about-us p {
+            font-size: 1.2rem; /* Adjust font size for readability */
+            line-height: 1.6; /* Line spacing for better readability */
+            margin: 10px auto; /* Space between paragraphs */
+            max-width: 800px; /* Restrict the text width */
+        }
+</style>
+</head>
+
+<header>
+    <a href="index.html">
+        <img src="https://i.imgur.com/VhfYosV.png" alt="Logo"> <!-- Logo -->
+    </a>
+    <nav class="nav-bar">
+        <a class="nav-link" href="Assignment.html">Home</a>
+        <a class="nav-link" href="book.html">Books</a>
+        <a class="nav-link" href="19th-century-books.html">19th Century Books</a>
+        <a class="nav-link" href="delivery.html">Delivery</a>
+        <a class="nav-link" href="contact.html">Contact Us</a>
+    </nav>
+    
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button class="btn btn-light">Search</button>
+        <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+</header>
+
+<!-- 19th Century Books -->
+<div class="section-title">19th Century Books</div>
+<div class="single-book">
+    <img src="https://i.imgur.com/iVeeUv2.jpeg" alt="19th Century Books">
+    <div class="single-book-description">
+        <h3>Pride and Prejudice</h3>
+        <p>Since its immediate success in 1813, Pride and Prejudice has remained one of the most 
+            popular novels in the English language. Jane Austen called this brilliant work "her o
+            wn darling child" and its vivacious heroine, Elizabeth Bennet, "as delightful a creat
+            ure as ever appeared in print." The romantic clash between the opinionated Elizabeth 
+            and her proud beau, Mr. Darcy, is a splendid performance of civilized sparring. And 
+            Jane Austen's radiant wit sparkles as her characters dance a delicate quadrille of 
+            flirtation and intrigue, making this book the most superb comedy of manners of Regency England.</p>
+    </div>
+</div>
+
+<div class="single-book">
+    <img src="https://i.imgur.com/1S9JvCU.jpeg" alt="19th Century Books">
+    <div class="single-book-description">
+        <h3>Jane Eyre</h3>
+        <p>Charlotte Brontë tells the story of orphaned Jane Eyre, who grows up in the home of her heartless aunt, enduring loneliness and cruelty. This troubled childhood strengthens Jane's natural independence and spirit - which prove necessary when she finds employment as a governess to the young ward of Byronic, brooding Mr Rochester. As her feelings for Rochester develop, Jane gradually uncovers Thornfield Hall's terrible secret, forcing her to make a choice. Should she stay with Rochester and live with the consequences, or follow her convictions - even if it means leaving the man she loves? A novel of intense power and intrigue, Jane Eyre dazzled readers with its passionate depiction of a woman's search for equality and freedom.</p>
+    </div>
+</div>
+
+
+<div class="single-book">
+    <img src="https://i.imgur.com/LK0qhrU.jpeg" alt="19th Century Books">
+    <div class="single-book-description">
+        <h3>Alice Adventures in Wonderland & Through the looking-Glass</h3>
+        <p>Since its immediate success in 1813, Pride and Prejudice has remained one of the most 
+            popular novels in the English language. Jane Austen called this brilliant work "her o
+            wn darling child" and its vivacious heroine, Elizabeth Bennet, "as delightful a creat
+            ure as ever appeared in print." The romantic clash between the opinionated Elizabeth 
+            and her proud beau, Mr. Darcy, is a splendid performance of civilized sparring. And 
+            Jane Austen's radiant wit sparkles as her characters dance a delicate quadrille of 
+            flirtation and intrigue, making this book the most superb comedy of manners of Regency England.</p>
+    </div>
+</div>
+
+
+<div class="single-book">
+    <img src="https://i.imgur.com/cZpL3vt.jpeg" alt="19th Century Books">
+    <div class="single-book-description">
+        <h3>Les Misérables</h3>
+        <p>Victor Hugo's tale of injustice, heroism and love follows the fortunes of Jean Valjean, an escaped convict determined to put his criminal past behind him. But his attempts to become a respected member of the community are constantly put under threat: by his own conscience, when, owing to a case of mistaken identity, another man is arrested in his place; and by the relentless investigations of the dogged Inspector Javert. It is not simply for himself that Valjean must stay free, however, for he has sworn to protect the baby daughter of Fantine, driven to prostitution by poverty.</p>
+    </div>
+</div>
+
+
+<div class="single-book">
+    <img src="https://i.imgur.com/jhN5gAU.jpeg" alt="19th Century Books">
+    <div class="single-book-description">
+        <h3>The Picture of Dorian Gray</h3>
+        <p>In this celebrated work Wilde forged a devastating portrait of the effects of evil and debauchery on a young aesthete in late-19th-century England. Combining elements of the Gothic horror novel and decadent French fiction, the book centers on a striking premise: As Dorian Gray sinks into a life of crime and gross sensuality, his body retains perfect youth and vigor while his recently painted portrait grows day by day into a hideous record of evil, which he must keep hidden from the world. For over a century, this mesmerizing tale of horror and suspense has enjoyed wide popularity. It ranks as one of Wilde's most important creations and among the classic achievements of its kind.</p>
+    </div>
+</div>
+
+<div class="single-book">
+    <img src="https://i.imgur.com/v2ChYa7.jpeg" alt="19th Century Books">
+    <div class="single-book-description">
+        <h3>Wuthering Heights</h3>
+        <p>At the centre of this novel is the passionate love between Catherine Earnshaw and Heathcliff - recounted with such emotional intensity that a plain tale of the Yorkshire moors acquires the depth and simplicity of ancient tragedy.
+
+            This best-selling Norton Critical Edition is based on the 1847 first edition of the novel. For the Fourth Edition, the editor has collated the 1847 text with several modern editions and has corrected a number of variants, including accidentals. The text is accompanied by entirely new explanatory annotations.</p>
+    </div>
+</div>
+
+<footer>
+    <p style="color:aliceblue">&copy; 2023 T_Emblemy Collectible Books. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><img src="https://i.imgur.com/6FkGqMa.png" alt="Facebook"></a>
+        <a href="#"><img src="https://i.imgur.com/RXFuBpN.jpeg" alt="Twitter"></a>
+        <a href="#"><img src="https://i.imgur.com/aukGJOp.jpeg" alt="Instagram"></a>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (from CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

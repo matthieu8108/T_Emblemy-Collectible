@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T_Emblemy Collectible Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Bootstrap CSS (from CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (optional) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('https://i.imgur.com/lht3XbH.jpeg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            color: rgb(255, 255, 255);
+            margin: 0; /* Remove default margin */
+        }
+
+        header {
+            background-color: rgba(23, 19, 15, 0.8);
+            padding: 20px;
+            margin-bottom: 0; /* Ensure no margin below the header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            width: 200px; /* Logo size */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .nav-bar {
+        display: flex; /* Arrange items in a horizontal row */
+        gap: 15px; /* Add space between links */
+        justify-content: center; /* Center the links horizontally */
+        align-items: center; /* Align items vertically */
+        list-style: none; /* Remove any default list styles */
+        padding: 0;
+        margin: 0;
+        }
+
+        .nav-link {
+        color: aliceblue;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        transition: color 0.3s ease;
+        } 
+
+        .nav-link:hover {
+        color: #ffd700;
+        }
+
+        /* Ad Image Styling */
+        .ad-image {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            margin: 20px 0;
+            border-radius: 10px;
+
+        } 
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 6px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 20px;
+        }
+
+        .search-bar button {
+            margin-right: 15px; /* Adds space between the button and the cart icon */
+        }
+
+        .cart-icon {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+
+         /* Title Styling */
+         .section-title {
+            font-family: serif;
+            text-align: center;
+            font-size: 2rem;
+            margin: 50px 0 20px;
+            cursor: pointer;
+        }
+
+        
+        .row {
+          display: flex;
+          flex-wrap: wrap; /* Allows books to wrap to the next row */
+          justify-content: center; /* Center the books horizontally */
+          gap: 20px 30px; /* Space between books in the same row */
+          margin-bottom: 70px; /* Add space between rows (adjust as needed) */
+        }
+
+        .book {
+           flex: 0 1 calc(20% - 20px); /* Adjust book width to 20% of the container */
+           max-width: 220px; /* Optional: Set a maximum width for the books */
+           border: 1px solid #fff;
+           border-radius: 5px;
+           padding: 10px;
+           background-color: rgba(255, 255, 255, 0.1); /* Subtle background for contrast */
+           text-align: center; /* Center-align the content */
+        }
+
+        /* Book Section Styling */
+        .books-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .book-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            width: calc(20% - 20px); /* Adjust to fit 4 books in a row */
+            transition: transform 0.3s;
+        }
+
+        .book-card:hover {
+            transform: scale(1.05);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Single Book Section */
+        .single-book {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 40px;
+        }
+
+        .single-book img {
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .single-book-description {
+            max-width: 600px;
+        }
+
+        footer {
+            background-color: rgba(23, 19, 15, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+        }
+
+        .about-us {
+            background-color: rgba(34, 34, 34, 0.8); /* Dark background with slight transparency */
+            color: white;
+            text-align: center;
+            padding: 50px 20px; /* Padding for spacing */
+            margin: 40px 0; /* Space above and below the section */
+            border-radius: 10px; /* Rounded corners */
+            font-family: serif; /* A classic font for readability */
+        }
+
+        .about-us h2 {
+            font-size: 2.5rem; /* Larger font size for the heading */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+        
+        .about-us p {
+            font-size: 1.2rem; /* Adjust font size for readability */
+            line-height: 1.6; /* Line spacing for better readability */
+            margin: 10px auto; /* Space between paragraphs */
+            max-width: 800px; /* Restrict the text width */
+        }
+</style>
+</head>
+<body>
+<header>
+    <a href="index.html">
+        <img src="https://i.imgur.com/VhfYosV.png" alt="Logo"> <!-- Logo -->
+    </a>
+    <nav class="nav-bar">
+        <a class="nav-link" href="Assignment.html">Home</a>
+        <a class="nav-link" href="book.html">Books</a>
+        <a class="nav-link" href="19thCenturyBooks.html">19th Century Books</a>
+        <a class="nav-link" href="delivery.html">Delivery</a>
+        <a class="nav-link" href="contact.html">Contact Us</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button class="btn btn-light">Search</button>
+        <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+</header>
+ 
+  <img class="ad-image" src="https://i.imgur.com/YLDg92j.jpeg" alt="Ad Image"><!-- Ad -->
+
+     <!-- Best Sellers Section -->
+     <div class="section-title">Best Sellers</div>
+     <div class="books-container">
+         <div class="book-card">
+             <img src="https://i.imgur.com/OuznKS3.jpeg" alt="Book 1">
+             <p>QuickSilve</p>
+         </div>
+         <div class="book-card">
+             <img src="https://i.imgur.com/n9wgjaY.jpeg" alt="Book 2">
+             <p>A fate inked in Blood</p>
+         </div>
+         <div class="book-card">
+             <img src="https://i.imgur.com/edg0QO3.jpeg" alt="Book 3">
+             <p>Trial of the sun Queen</p>
+         </div>
+         <div class="book-card">
+             <img src="https://i.imgur.com/sDXoAI5.jpeg" alt="Book 4">
+             <p>Dirty lying Faeries</p>
+         </div>
+     </div>
+
+     <!-- 19th Century Books Section -->
+    <div class="section-title">Best Books of the 19th Century</div>
+    <div class="books-container">
+        <div class="book-card">
+            <img src="https://i.imgur.com/LKJJZM6.jpeg" alt="Book 1">
+            <p>The Serpent and the wings of night</p>
+        </div>
+        <div class="book-card">
+            <img src="https://i.imgur.com/fkURojX.jpeg" alt="Book 2">
+            <p>The Hurricane Wars</p>
+        </div>
+        <div class="book-card">
+            <img src="https://i.imgur.com/qVMZLRP.jpeg" alt="Book 3">
+            <p>A court of thorns and roses</p>
+        </div>
+        <div class="book-card">
+            <img src="https://i.imgur.com/US0sPab.jpeg" alt="Book 4">
+            <p>The Crown of Gilded Bones</p>
+        </div>
+    </div>
+    <!-- Prize Winning Section -->
+    <div class="section-title">Prize Winning Book</div>
+    <div class="single-book">
+        <img src="https://i.imgur.com/S0pa4QW.jpeg" alt="Prize Winning Book">
+        <div class="single-book-description">
+            <h3>Prize Winning Book Title</h3>
+            <p>QUICK ADD
+                James (2024 B&N Book of the Year) (National Book Award Winner)
+                by Percival Everett
+                
+                We are thrilled to announce James by Percival Everett as the Barnes & Noble Book of the Year! In a powerful story of family, home and freedom, Everett has flipped the script on an American classic as Huck Finn steps to the side and Jim — James — takes center stage.
+                
+                "Sharp, smart, funny and bold; this is a must-read." — Mike, Bookseller, Minneapolis, MN.
+                
+                Learn more on Poured Over: The B&N Podcast, and browse all Book of the Year Winners & Finalists..</p>
+        </div>
+    </div>
+
+    <!-- Rarest Books Section -->
+    <div class="section-title">Rarest Books</div>
+    <div class="books-container">
+        <div class="book-card">
+            <img src="https://i.imgur.com/MKyh2Jf.jpeg" alt="Rare Book 1">
+            <p>Circe</p>
+        </div>
+        <div class="book-card">
+            <img src="https://i.imgur.com/35fHYiL.jpeg" alt="Rare Book 2">
+            <p>Atalanta</p>
+        </div>
+        <div class="book-card">
+            <img src="https://i.imgur.com/owvqldS.jpeg" alt="Rare Book 3">
+            <p>Hera</p>
+        </div>
+        <div class="book-card">
+            <img src="https://i.imgur.com/M5aDXC8.jpeg" alt="Rare Book 4">
+            <p>Clytemnestra</p>
+        </div>
+    </div>
+<footer>
+    <p style="color:aliceblue">&copy; 2023 T_Emblemy Collectible Books. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><img src="https://i.imgur.com/6FkGqMa.png" alt="Facebook"></a>
+        <a href="#"><img src="https://i.imgur.com/RXFuBpN.jpeg" alt="Twitter"></a>
+        <a href="#"><img src="https://i.imgur.com/aukGJOp.jpeg" alt="Instagram"></a>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (from CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

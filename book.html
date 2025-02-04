@@ -36,7 +36,7 @@
         }
 
         .nav-bar {
-             display: flex; /* Arrange items in a horizontal row */
+        display: flex; /* Arrange items in a horizontal row */
         gap: 15px; /* Add space between links */
         justify-content: center; /* Center the links horizontally */
         align-items: center; /* Align items vertically */
@@ -107,7 +107,7 @@
         }
 
         .book {
-           flex: 1 1  200px; /* Adjust book width to 20% of the container */
+           flex: 0 1 calc(20% - 20px); /* Adjust book width to 20% of the container */
            max-width: 220px; /* Optional: Set a maximum width for the books */
            border: 1px solid #fff;
            border-radius: 5px;
@@ -176,40 +176,40 @@
         }
 
         /* Title text styling */
-.single-book-description h3 {
-    font-size: 1.5rem; /* Slightly smaller title size for mobile */
-    margin-bottom: 10px;
-}
+        .single-book-description h3 {
+            font-size: 1.5rem; /* Slightly smaller title size for mobile */
+            margin-bottom: 10px;
+        }
 
-/* Description text */
-.single-book-description p {
-    font-size: 1rem; /* Normal font size for readability */
-    line-height: 1.6;
-}
+        /* Description text */
+        .single-book-description p {
+            font-size: 1rem; /* Normal font size for readability */
+            line-height: 1.6;
+        }
 
-/* Responsive adjustments for smaller screens (phones) */
-@media (max-width: 768px) {
-    .single-book {
-        flex-direction: column; /* Stack the image and text vertically on mobile */
-        align-items: center;
-    }
+        /* Responsive adjustments for smaller screens (phones) */
+        @media (max-width: 768px) {
+        .single-book {
+            flex-direction: column; /* Stack the image and text vertically on mobile */
+            align-items: center;
+        }
     
-    .single-book img {
-        width: 70%; /* Make image a reasonable size on mobile */
-    }
+       .single-book img {
+            width: 70%; /* Make image a reasonable size on mobile */
+        }
     
-    .single-book-description {
-        max-width: 100%; /* Allow the description to take full width on smaller screens */
-    }
+        .single-book-description {
+            max-width: 100%; /* Allow the description to take full width on smaller screens */
+        }
     
-    .single-book-description h3 {
-        font-size: 1.4rem; /* Adjust title size for better readability */
-    }
+        .single-book-description h3 {
+            font-size: 1.4rem; /* Adjust title size for better readability */
+        }
 
-    .single-book-description p {
-        font-size: 1rem; /* Keep paragraph size comfortable */
-    }
-}
+        .single-book-description p {
+            font-size: 1rem; /* Keep paragraph size comfortable */
+        }
+        }
 
 
         footer {

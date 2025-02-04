@@ -133,6 +133,7 @@
             border-radius: 5px;
             width: calc(20% - 20px); /* Adjust to fit 4 books in a row */
             transition: transform 0.3s;
+            margin: 10px;
         }
 
         .book-card p {
@@ -151,6 +152,7 @@
             width: 100%;
             height: auto;
             border-radius: 5px;
+            margin-bottom: 10px
         }
 
         /* Single Book Section */
@@ -187,6 +189,26 @@
             line-height: 1.6;
         }
 
+        @media (max-width: 768px) {
+            .book-card{
+                width: calc(50% - 20px);
+            }
+
+            .book-card p {
+                font-sze: 0.9rem;
+            }
+        }
+
+        @media (max-width:480px) {
+            .book-card {
+                width: 100%;
+            }
+
+            .book-card p {
+                font-size: 1rem;
+            }
+        }
+
         /* Responsive adjustments for smaller screens (phones) */
         @media (max-width: 768px) {
         .single-book {
@@ -195,7 +217,7 @@
         }
     
        .single-book img {
-            width: 70%; /* Make image a reasonable size on mobile */
+            width: 50%; /* Make image a reasonable size on mobile */
         }
     
         .single-book-description {

@@ -111,6 +111,12 @@
             margin: 160px 0;
         }
 
+        .container {
+            max-width: 1200px;
+            margin:auto;
+            padding:20px;
+        }
+
         .row {
             display: flex;
             flex-wrap: wrap; /* Allow books to wrap to the next line if needed */
@@ -119,12 +125,11 @@
         }
 
         .book {
-            flex: 0 1 calc(20% - 20px); /* Adjust book width to 20% of the container with a gap */
-            max-width: 220px; /* Optional: Set a maximum width for the books */
+            flex: 1 1 200px; /* ensures proper resizing*/
+            max-width: 220px; 
             border: 1px solid #fff;
             border-radius: 5px;
             padding: 10px;
-            margin: 10px 0; /* Add vertical margin */
             transition: transform 0.3s;
             background-color: rgba(255, 255, 255, 0.1); /* Add subtle background for contrast */
             text-align: center; /* Center-align the content */
@@ -138,7 +143,13 @@
             width: 100%; /* Ensure images fit the book container */
             height: auto;
             border-radius: 5px;
-            margin-bottom: 10px; /* Add spacing below the image */
+            
+        }
+
+        .book-title {
+            font-size: 1.2rem;
+            white-space: normal;
+            word-wrap: break-word;
         }
 
         footer {
